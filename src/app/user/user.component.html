@@ -1,0 +1,41 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">User</th>
+      <th scope="col">Password</th>
+      <th scope="col">Profile</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let user of users">
+      <th scope="1">1</th>
+      <td>{{ user.name }}</td>
+      <td>{{ user.user }}</td>
+      <td>{{ user.password }}</td>
+      <td>
+        <img
+          style="width: 70px; height: 50px"
+          src="{{ user.profile }}"
+          alt=""
+        />
+      </td>
+      <td>{{ user.phone }}</td>
+      <td><button (click)="doDeleteUser(user.id)" class="btn btn-sam btn-danger">Delete</button></td>
+    </tr>
+    <!-- <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>twitter</td>
+      </tr>
+    </tbody> -->
+  </tbody>
+</table>
